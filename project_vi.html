@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проект Ви</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .glitch {
+            color: white;
+            font-size: 48px;
+            text-align: center;
+            position: relative;
+            animation: glitch-anim 2s infinite;
+        }
+        @keyframes glitch-anim {
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            20% { transform: translate(2px, 0); }
+            30% { transform: translate(-2px, 0); }
+            40% { transform: translate(2px, 0); }
+            50% { transform: translate(-2px, 0); }
+            60% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="glitch">Проект Ви</div>
+    <script>
+        window.onload = function() {
+            const glitchText = document.querySelector('.glitch');
+            glitchText.style.opacity = '1'; // Делаем текст видимым
+        }
+    </script>
+</body>
+</html>
